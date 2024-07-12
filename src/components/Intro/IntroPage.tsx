@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Edit3, ChevronLeft } from 'lucide-react';
+import { Edit3, ChevronLeft,User } from 'lucide-react';
 import Preferences from '../Preferance/Preferance'; // Adjust import path as per your file structure
 import EditDetails from '../EditDetails/EditDetails';
 import bgImage from '../../assets/Bg.png';
@@ -16,11 +16,7 @@ const IntroPage: React.FC = () => {
   const toggle2 = () => {
     setVisibility2(prevVisibility => !prevVisibility);
   };
-  const sample = () => {
-    setUser('');
-    setUsername('');
-    setInterests([]);
-  };
+
 
   const addInterests = (selectedItems: string[]) => {
     setInterests([...interests, ...selectedItems]);
@@ -30,7 +26,7 @@ const IntroPage: React.FC = () => {
           <div className="relative max-w-[600px] h-[900px] max-h-[100vh]"
           style={{ backgroundImage: `url(${bgImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
       <div className="absolute top-0 left-0 right-0 flex justify-between p-4">
-        <button onClick={sample} className="text-xl bg-white p-3 rounded-md">
+        <button  className="text-xl bg-white p-3 rounded-md">
           <ChevronLeft />
         </button>
         <button onClick={toggle} className="text-xl bg-white p-3 rounded-md">
@@ -38,7 +34,12 @@ const IntroPage: React.FC = () => {
         </button>
       </div>
       <div className="relative top-[50vh] left-[84vw]">
-        {/* Content */}
+        <div className="absolute top-[-50px] left-[-18px] flex justify-between p-4">
+        <button className="text-sm bg-white p-2 pr-4 pl-4 rounded-md">
+          <User/>
+          <div className='mt-1'>Edit</div>
+        </button>
+      </div>
       </div>
       <div className="relative top-[55vh] min-h-[45vh] bg-white rounded-t-3xl">
         <div className="h-[20%] p-5">
