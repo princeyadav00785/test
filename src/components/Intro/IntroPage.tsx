@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Edit3, User, ChevronLeft } from 'lucide-react';
+import { Edit3, ChevronLeft } from 'lucide-react';
 import Preferences from '../test/a';
 
 const IntroPage: React.FC = () => {
@@ -18,7 +18,7 @@ const IntroPage: React.FC = () => {
   }
 
   return (
-    <div className="relative max-w-[600px] h-[900px] bg-gray-600">
+    <div className="relative max-w-[600px] h-[900px] max-h-[100vh] bg-gray-600">
       <div className="absolute top-0 left-0 right-0 flex justify-between p-4">
         <button onClick={sample} className="text-xl bg-white p-3 rounded-md">
           <ChevronLeft />
@@ -33,7 +33,7 @@ const IntroPage: React.FC = () => {
           Edit
         </button> */}
       </div>
-      <div className="relative top-[55vh] h-[40vh] bg-white rounded-t-3xl">
+      <div className="relative top-[55vh] min-h-[45vh] bg-white rounded-t-3xl">
         <div className="h-[20%] p-5">
           <div className="flex font-bold text-2xl justify-between">
             {user}
