@@ -41,7 +41,7 @@ const Preferences: React.FC<PreferencesProps> = ({ toggle, visibility, addIntere
   };
 
   return (
-    <div className={`fixed top-[90px] left-0 w-full h-full flex justify-center items-center bg-[rgba(0,0,0,0.7)] z-[1000] transition-opacity duration-300 ${visibility ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
+    <div className={`fixed top-1 left-0 w-full h-full flex justify-center items-center bg-[rgba(0,0,0,0.7)] z-[1000] transition-opacity duration-300 ${visibility ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
       <div className="bg-white p-5 max-w-[600px] w-full max-h-[calc(100%-40px)] overflow-y-auto rounded-[10px] shadow-lg">
         <div className="mb-5">
           <h2 className="text-xl font-semibold mb-3">Aesthetics</h2>

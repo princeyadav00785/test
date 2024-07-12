@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Edit3, ChevronLeft } from 'lucide-react';
-import Preferences from '../test/a'; // Adjust import path as per your file structure
+import Preferences from '../Preferance/Preferance'; // Adjust import path as per your file structure
 
 const IntroPage: React.FC = () => {
   const [user, setUser] = useState('Ayush Gupta');
@@ -66,7 +66,7 @@ const IntroPage: React.FC = () => {
                 {interests.map((interest, index) => (
                   <div
                     key={index}
-                    className="bg-gray-200 border border-gray-300 rounded-full px-4 py-2 m-2 cursor-pointer transition-colors duration-300"
+                    className="bg-[#EF4B44] border border-gray-300 rounded-full px-4 py-2 m-2 cursor-pointer transition-colors duration-300"
                   >
                     {interest}
                   </div>
