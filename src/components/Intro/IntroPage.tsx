@@ -28,10 +28,10 @@ const IntroPage: React.FC = () => {
         </button>
       </div>
       <div className="relative top-[50vh] left-[84vw]">
-        <button className="text-sm bg-white pt-2 pb-1 pr-4 pl-4 rounded-md">
+        {/* <button className="text-sm bg-white pt-2 pb-1 pr-4 pl-4 rounded-md">
           <User />
           Edit
-        </button>
+        </button> */}
       </div>
       <div className="relative top-[55vh] h-[40vh] bg-white rounded-t-3xl">
         <div className="h-[20%] p-5">
