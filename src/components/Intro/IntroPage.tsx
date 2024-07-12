@@ -1,17 +1,20 @@
 import React, { useState } from 'react';
 import { Edit3, ChevronLeft } from 'lucide-react';
 import Preferences from '../Preferance/Preferance'; // Adjust import path as per your file structure
+import EditDetails from '../EditDetails/EditDetails';
 
 const IntroPage: React.FC = () => {
   const [user, setUser] = useState('Ayush Gupta');
   const [username, setUsername] = useState('gupta_ayush');
   const [interests, setInterests] = useState<string[]>([]);
   const [visibility, setVisibility] = useState(false);
-
+  const [visibility2, setVisibility2] = useState(false);
   const toggle = () => {
     setVisibility(prevVisibility => !prevVisibility);
   };
-
+  const toggle2 = () => {
+    setVisibility2(prevVisibility => !prevVisibility);
+  };
   const sample = () => {
     setUser('');
     setUsername('');
@@ -40,7 +43,7 @@ const IntroPage: React.FC = () => {
           <div className="flex font-bold text-2xl justify-between">
             {user}
             <div>
-              <button className="text-xl bg-opacity-50 rounded-md">
+              <button onClick={toggle2} className="text-xl bg-opacity-50 rounded-md">
                 <Edit3 />
               </button>
             </div>
@@ -76,6 +79,7 @@ const IntroPage: React.FC = () => {
           </div>
       </div>
       <Preferences toggle={toggle} visibility={visibility} addInterests={addInterests} />
+      <EditDetails toggle={toggle2} visibility={visibility2} user={user} username={username} setUser={setUser} setUsername={setUsername} />
     </div>
   );
 };
