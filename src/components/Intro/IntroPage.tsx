@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Edit3, ChevronLeft } from 'lucide-react';
 import Preferences from '../Preferance/Preferance'; // Adjust import path as per your file structure
 import EditDetails from '../EditDetails/EditDetails';
+import bgImage from '../../assets/Bg.png';
 
 const IntroPage: React.FC = () => {
   const [user, setUser] = useState('Ayush Gupta');
@@ -26,7 +27,8 @@ const IntroPage: React.FC = () => {
   };
 
   return (
-    <div className="relative max-w-[600px] h-[900px] max-h-[100vh] bg-gray-600">
+          <div className="relative max-w-[600px] h-[900px] max-h-[100vh]"
+          style={{ backgroundImage: `url(${bgImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
       <div className="absolute top-0 left-0 right-0 flex justify-between p-4">
         <button onClick={sample} className="text-xl bg-white p-3 rounded-md">
           <ChevronLeft />
@@ -48,20 +50,20 @@ const IntroPage: React.FC = () => {
               </button>
             </div>
           </div>
-          <div className="mt-2 mb-4">
+          <div className="mt-2 mb-3">
             {username}
           </div>
         </div>
-        <div className="mt-10">
+        <div className="">
           <hr />
         </div>
-        <div className="p-5 flex font-bold text-2xl justify-between">
+        <div className="p-2 ml-4 mr-3 flex font-bold text-xl justify-between">
           <h1 className="font-semibold">Interests</h1>
-          <button onClick={toggle} className="text-xl bg-opacity-50 rounded-md">
+          <button onClick={toggle} className="text-xl ">
             <Edit3 />
           </button>
         </div>
-        <div className="p-5 ">
+        <div className="p-5">
             {interests.length === 0 ? (
               <p className="text-gray-500">No interests</p>
             ) : (
@@ -69,7 +71,7 @@ const IntroPage: React.FC = () => {
                 {interests.map((interest, index) => (
                   <div
                     key={index}
-                    className="bg-[#EF4B44] border border-gray-300 rounded-full px-4 py-2 m-2 cursor-pointer transition-colors duration-300"
+                    className="bg-[#F5F5F5] border border-gray-300 rounded-full px-4 py-2 m-2 cursor-pointer transition-colors duration-300 text-md"
                   >
                     {interest}
                   </div>
